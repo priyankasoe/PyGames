@@ -90,6 +90,8 @@ class ShotPutFrame(Frame):
         self.stopButton.grid(row=3)
 
     def roll(self):
+        '''ShotPutFrame(self).roll()
+        handler method to roll the die'''
         if self.dicenum < 9:
             # roll the die
             self.dice[self.dicenum].roll()
@@ -112,6 +114,8 @@ class ShotPutFrame(Frame):
             self.stop()
 
     def stop(self):
+        '''ShotPutFrame(self).stop()
+        handler method to move to next die/turn'''
         self.stopButton['text'] = 'Stop'
         if self.attempts < 3:
             if self.score > self.highscore:
